@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 
 int main(void) {
@@ -12,10 +13,9 @@ int main(void) {
     std::cin >> l >> r;
     min = min < l ? l : min;
     max = max > r ? r : max;
-    std::cerr << min << ',' << max << std::endl;
   }
 
-  std::cout << max - min + 1 << std::endl;
+  std::cout << std::max(0, max - min + 1) << std::endl;
 
   return 0;
 }
